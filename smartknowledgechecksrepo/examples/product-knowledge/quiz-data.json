@@ -1,0 +1,144 @@
+{
+  "title": "Product Knowledge Assessment",
+  "description": "Test your ability to match customer problems to the right product features",
+  "estimated_completion_minutes": 10,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Real-Time Inventory Sync",
+      "customerSays": "We have 50 stores and need to track inventory in real time across all locations. When someone sells in Chicago, New York should know instantly.",
+      "question": "Which feature solves this?",
+      "options": [
+        {
+          "text": "The Inventory Dashboard with real-time sync enabled. Updates across all stores in <2 seconds.",
+          "score": 3,
+          "feedback": "✓ Perfect! This is the exact use case for our real-time inventory feature. You matched the customer need to the perfect solution."
+        },
+        {
+          "text": "The standard Inventory module. It updates once per day.",
+          "score": 1,
+          "feedback": "⚠️ The standard module exists, but this customer needs REAL-TIME updates. Recommend the Inventory Dashboard with sync instead - it's what they actually need."
+        },
+        {
+          "text": "We don't have a solution for that.",
+          "score": 0,
+          "feedback": "❌ We DO! This is exactly what our Inventory Dashboard with real-time sync does. Know your features to serve customers better."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Custom Reporting",
+      "customerSays": "Our CFO needs monthly reports on sales by region, product category, and sales rep. But she wants it customized to our specific metrics.",
+      "question": "What do you recommend?",
+      "options": [
+        {
+          "text": "Use the Report Builder - she can create any custom report, save templates, and schedule automatic delivery.",
+          "score": 3,
+          "feedback": "✓ Excellent! The Report Builder is exactly for custom, one-off reporting needs. She's empowered to create what she wants."
+        },
+        {
+          "text": "We have standard reports. She can use those.",
+          "score": 1,
+          "feedback": "⚠️ Standard reports exist, but she asked for custom metrics. Better answer: 'Use our Report Builder - it lets you create exactly what you need.'"
+        },
+        {
+          "text": "That's too custom. We can't help with that.",
+          "score": 0,
+          "feedback": "❌ We absolutely can! That's exactly what the Report Builder does. Know your tools so you don't leave money on the table."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Multi-Channel Sales",
+      "customerSays": "We sell through our website, a mobile app, and in physical stores. We need one system that tracks inventory across all channels so we don't oversell.",
+      "question": "What's the solution?",
+      "options": [
+        {
+          "text": "The Omnichannel Commerce Platform. It syncs inventory, orders, and customer data across all channels automatically.",
+          "score": 3,
+          "feedback": "Perfect! This is the flagship solution for multi-channel retailers. You nailed matching their complex need to our best feature."
+        },
+        {
+          "text": "You'll need separate systems for each channel.",
+          "score": 0,
+          "feedback": "❌ Wrong! That's why customers come to us. Our Omnichannel Commerce Platform is designed to unify all channels. This is a missed upsell."
+        },
+        {
+          "text": "We have a web module and a mobile module, but stores are separate.",
+          "score": 1,
+          "feedback": "⚠️ Those modules exist, but they don't solve the core problem (overselling across channels). The real answer is our Omnichannel Commerce Platform."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Integration Challenge",
+      "customerSays": "We use Salesforce for CRM and QuickBooks for accounting. We need our data to flow between all three systems automatically so we're not manually re-entering everything.",
+      "question": "How do you help?",
+      "options": [
+        {
+          "text": "Our Integration Hub connects to 500+ apps including Salesforce and QuickBooks. No manual re-entry needed.",
+          "score": 3,
+          "feedback": "✓ Excellent! The Integration Hub is exactly for this. You showed you understand the pain point and have the perfect solution."
+        },
+        {
+          "text": "You'll need to manually export and import data between systems.",
+          "score": 0,
+          "feedback": "❌ Why would you suggest manual work when we have the Integration Hub? Know your tools - it saves the customer time AND wins you the deal."
+        },
+        {
+          "text": "We integrate with some apps, but not those two.",
+          "score": 1,
+          "feedback": "⚠️ Check our Integration Hub documentation - we definitely support both. Always verify before saying no. You just lost this customer."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scenario": "Team Collaboration",
+      "customerSays": "Our sales team is remote and distributed. They need to see what everyone else is working on, share notes, and collaborate on deals.",
+      "question": "What solves this?",
+      "options": [
+        {
+          "text": "The Team Collaboration Suite. Shared workspaces, deal boards, and real-time comments so everyone knows what's happening.",
+          "score": 3,
+          "feedback": "Perfect! This is exactly what remote teams need. You matched a modern working style to the perfect feature."
+        },
+        {
+          "text": "They can each use their own system and update manually.",
+          "score": 0,
+          "feedback": "❌ That defeats the purpose of collaboration. Our Team Collaboration Suite is designed for distributed teams. Recommend it!"
+        },
+        {
+          "text": "We have email and documents.",
+          "score": 1,
+          "feedback": "⚠️ Email and documents exist everywhere. Our advantage is the Team Collaboration Suite - built specifically for sales team workflows. That's what to pitch."
+        }
+      ]
+    }
+  ],
+  "masteryLevels": [
+    {
+      "threshold": 85,
+      "label": "Product Expert 🏆",
+      "description": "You deeply understand our products and can match customer problems to solutions confidently. You close deals because you know what solves their pain."
+    },
+    {
+      "threshold": 70,
+      "label": "Strong Product Knowledge 💼",
+      "description": "You know most of our products and their use cases. Review scenarios where you scored lower to deepen your expertise."
+    },
+    {
+      "threshold": 50,
+      "label": "Building Knowledge 📈",
+      "description": "You're learning our product suite. Work with your manager on the scenarios you found challenging. Product knowledge = sales success."
+    },
+    {
+      "threshold": 0,
+      "label": "Product Training Needed 🎓",
+      "description": "Review our product documentation and ask your manager for training. You can't sell what you don't understand!"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "title": "Workplace Compliance Training",
+  "description": "Learn to recognize and respond to workplace compliance issues correctly",
+  "estimated_completion_minutes": 8,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Harassment Recognition",
+      "customerSays": "A coworker made a joke about someone's appearance in a team meeting.",
+      "question": "Is this harassment?",
+      "options": [
+        {
+          "text": "Yes, impact matters more than intent. If it made someone uncomfortable, it's harassment.",
+          "score": 3,
+          "feedback": "✓ Correct! Our policy is clear: if a comment is offensive or creates discomfort, it's harassment regardless of whether it was meant as a joke."
+        },
+        {
+          "text": "It depends on who said it and who it was about.",
+          "score": 1,
+          "feedback": "⚠️ Close, but not quite right. The INTENT of the joke-maker doesn't matter. What matters is the IMPACT on the person. If they felt uncomfortable, report it."
+        },
+        {
+          "text": "No, it was just a joke. People are too sensitive these days.",
+          "score": 0,
+          "feedback": "❌ Incorrect. Our harassment policy covers all comments that create a hostile environment, including jokes. 'Just joking' is not an excuse. Report it to HR immediately."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Reporting Procedure",
+      "customerSays": "You witness inappropriate behavior but the person involved apologized afterwards.",
+      "question": "Should you still report it?",
+      "options": [
+        {
+          "text": "Yes, report it to your manager or HR regardless of apology. They need to know for documentation purposes.",
+          "score": 3,
+          "feedback": "✓ Exactly right! An apology doesn't erase the behavior. We need documentation to identify patterns and protect the organization. Report first."
+        },
+        {
+          "text": "If they apologized, you can let it go. No need to report.",
+          "score": 0,
+          "feedback": "❌ Incorrect. Apologies don't prevent patterns. We MUST report to identify repeat offenders and protect our team. Your job is to report; HR's job is to investigate."
+        },
+        {
+          "text": "Talk to the person first before reporting.",
+          "score": 1,
+          "feedback": "⚠️ You mean well, but confronting the person privately can escalate the situation. Instead, go directly to HR or your manager. They're trained to handle this."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Investigation Process",
+      "customerSays": "HR is investigating a harassment complaint. What should you do if they interview you?",
+      "question": "What's the right approach?",
+      "options": [
+        {
+          "text": "Be honest, answer their questions directly, and don't discuss the investigation with coworkers.",
+          "score": 3,
+          "feedback": "Perfect! During an investigation: (1) Tell the truth, (2) Answer questions directly, (3) Keep it confidential - don't share details with others. This protects everyone."
+        },
+        {
+          "text": "Minimize what you saw to protect your coworker. They already feel bad.",
+          "score": 0,
+          "feedback": "❌ Wrong. 'Protecting' someone by lying harms the organization. Tell the truth. HR's job is to be fair - truth is your best protection."
+        },
+        {
+          "text": "Tell your friends what happened so they know both sides of the story.",
+          "score": 0,
+          "feedback": "❌ No. Investigations are confidential for a reason - to protect everyone involved. Gossiping interferes with the investigation and can constitute retaliation."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Prevention Responsibility",
+      "customerSays": "You notice a manager treating certain employees differently based on their age.",
+      "question": "What do you do?",
+      "options": [
+        {
+          "text": "Document what you observe and report it to HR. Discriminatory treatment is against policy, regardless of how 'nice' the manager is.",
+          "score": 3,
+          "feedback": "✓ Exactly right! Discrimination based on age, race, gender, etc. is illegal AND against our policy. Report it. You're being a good teammate by protecting everyone."
+        },
+        {
+          "text": "Mind your business. It's not your problem.",
+          "score": 0,
+          "feedback": "❌ It IS your responsibility. We all have a duty to prevent discrimination. Staying silent enables it. Report to HR."
+        },
+        {
+          "text": "Talk to the manager privately about it.",
+          "score": 1,
+          "feedback": "⚠️ Good intent, but managers may not recognize their own bias. Going to HR first is better - they're trained to investigate fairly and address patterns."
+        }
+      ]
+    }
+  ],
+  "masteryLevels": [
+    {
+      "threshold": 85,
+      "label": "Compliance Champion 🏆",
+      "description": "You understand our policies thoroughly and know how to handle situations correctly. You're a valuable team member in maintaining a safe, respectful workplace."
+    },
+    {
+      "threshold": 70,
+      "label": "Solid Compliance Knowledge 💼",
+      "description": "You understand most of our policies. Review any scenarios where you scored less than 3 to strengthen your knowledge."
+    },
+    {
+      "threshold": 50,
+      "label": "Developing Understanding 📈",
+      "description": "You're learning our compliance policies. Review the feedback carefully, especially for questions you answered incorrectly."
+    },
+    {
+      "threshold": 0,
+      "label": "Additional Training Needed 🎓",
+      "description": "Our policies are important for everyone's safety. Talk to your manager about getting additional training resources."
+    }
+  ]
+}

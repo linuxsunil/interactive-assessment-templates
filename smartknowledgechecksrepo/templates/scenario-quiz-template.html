@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Scenario Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+            padding: 40px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .scenario {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 6px;
+        }
+
+        .scenario-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .scenario-text {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .option.correct {
+            border-color: #28a745;
+            background: #28a745;
+            color: white;
+        }
+
+        .option.incorrect {
+            border-color: #dc3545;
+            background: #dc3545;
+            color: white;
+        }
+
+        .feedback {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .feedback.good {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .feedback.bad {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .feedback-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .results {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .results h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .mastery-level {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+        }
+
+        .results-detail {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .results-detail p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1 id="quizTitle">Quiz Title</h1>
+        <p id="quizDescription">Quiz description</p>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div id="quiz">
+        <!-- Quiz content injected here -->
+    </div>
+
+    <div id="results" class="results">
+        <!-- Results displayed here -->
+    </div>
+</div>
+
+<script>
+    // ============================================
+    // CONFIGURATION: Edit quiz-data.json here
+    // ============================================
+
+    let quizData = [];
+    let masteryLevels = [
+        { threshold: 85, label: "Elite 🏆", color: "#28a745" },
+        { threshold: 70, label: "Skilled 💼", color: "#667eea" },
+        { threshold: 50, label: "Developing 📈", color: "#ffc107" },
+        { threshold: 0, label: "Keep Practicing 🎯", color: "#dc3545" }
+    ];
+
+    // Load quiz data
+    async function loadQuizData() {
+        try {
+            // Try to load external JSON file
+            const response = await fetch('quiz-data.json');
+            const data = await response.json();
+            quizData = data.scenarios;
+            document.getElementById('quizTitle').textContent = data.title;
+            document.getElementById('quizDescription').textContent = data.description;
+            initQuiz();
+        } catch (error) {
+            console.log('No external JSON found, using embedded data');
+            // Fallback to embedded data
+            quizData = [
+                {
+                    id: 1,
+                    scenario: "Example Scenario",
+                    customerSays: "This is the situation or objection",
+                    question: "How do you respond?",
+                    options: [
+                        {
+                            text: "Option A - Better response",
+                            score: 3,
+                            feedback: "Excellent! This addresses their concern and provides value."
+                        },
+                        {
+                            text: "Option B - Weak response",
+                            score: 0,
+                            feedback: "Weak. This dismisses their concern instead of addressing it."
+                        }
+                    ]
+                }
+            ];
+            document.getElementById('quizTitle').textContent = 'Interactive Scenario Quiz';
+            document.getElementById('quizDescription').textContent = 'Edit quiz-data.json to customize this quiz';
+            initQuiz();
+        }
+    }
+
+    // Quiz State
+    let currentQuestion = 0;
+    let score = 0;
+    let maxScore = 0;
+    let responses = [];
+
+    function initQuiz() {
+        renderQuestion();
+        updateProgress();
+    }
+
+    function renderQuestion() {
+        const quiz = document.getElementById('quiz');
+        const q = quizData[currentQuestion];
+
+        if (!q) {
+            showResults();
+            return;
+        }
+
+        maxScore += 3; // Each question worth max 3 points
+
+        let html = `
+            <div class="scenario">
+                <div class="scenario-title">${q.scenario}</div>
+                <div class="scenario-text">📞 Situation: "${q.customerSays}"</div>
+            </div>
+
+            <div class="question-container">
+                <h3 style="color: #333; margin-bottom: 20px;">❓ ${q.question}</h3>
+                <div class="options">
+        `;
+
+        q.options.forEach((option, index) => {
+            html += `
+                <div class="option" onclick="selectOption(${index}, ${q.options.length})">
+                    <strong style="color: #667eea;">Option ${String.fromCharCode(65 + index)}:</strong> ${option.text}
+                </div>
+            `;
+        });
+
+        html += `
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <div class="buttons" id="buttons"></div>
+            </div>
+        `;
+
+        quiz.innerHTML = html;
+    }
+
+    function selectOption(index, totalOptions) {
+        const q = quizData[currentQuestion];
+        const selectedOption = q.options[index];
+        const optionElements = document.querySelectorAll('.option');
+
+        // Disable all options
+        optionElements.forEach(opt => opt.style.pointerEvents = 'none');
+
+        // Show selected
+        optionElements[index].classList.add('selected');
+
+        // Show feedback
+        const feedback = document.getElementById('feedback');
+        const feedbackClass = selectedOption.score >= 2 ? 'good' : 'bad';
+        feedback.innerHTML = `
+            <div class="feedback-title">${selectedOption.score >= 2 ? '✓ Nice job!' : '⚠️ Not quite'}</div>
+            <div>${selectedOption.feedback}</div>
+        `;
+        feedback.classList.add('show', feedbackClass);
+
+        // Update score
+        score += selectedOption.score;
+        responses.push({
+            question: q.scenario,
+            selected: selectedOption.text,
+            score: selectedOption.score,
+            feedback: selectedOption.feedback
+        });
+
+        // Show next button
+        const buttons = document.getElementById('buttons');
+        buttons.innerHTML = `
+            <button class="btn-primary" onclick="nextQuestion()">Next Scenario →</button>
+        `;
+
+        updateProgress();
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            document.getElementById('quiz').innerHTML = '';
+            renderQuestion();
+            updateProgress();
+        } else {
+            showResults();
+        }
+    }
+
+    function updateProgress() {
+        const percent = ((currentQuestion + 1) / quizData.length) * 100;
+        document.getElementById('progressFill').style.width = percent + '%';
+    }
+
+    function showResults() {
+        document.getElementById('quiz').style.display = 'none';
+        const resultsDiv = document.getElementById('results');
+
+        // Calculate mastery level
+        const percentage = Math.round((score / maxScore) * 100);
+        let masteryLevel = masteryLevels[0];
+        for (let level of masteryLevels) {
+            if (percentage >= level.threshold) {
+                masteryLevel = level;
+                break;
+            }
+        }
+
+        let html = `
+            <h2>Quiz Complete!</h2>
+            <div class="score-display" style="color: ${masteryLevel.color};">${percentage}%</div>
+            <div class="mastery-level">${masteryLevel.label}</div>
+            <div class="results-detail">
+                <p><strong>Points Earned:</strong> ${score} / ${maxScore}</p>
+                <p><strong>Interpretation:</strong> Review your responses below to identify areas for improvement.</p>
+            </div>
+
+            <h3 style="margin-top: 30px; color: white;">Your Responses:</h3>
+            <div class="results-detail">
+        `;
+
+        responses.forEach((r, i) => {
+            const scoreColor = r.score >= 2 ? '#28a745' : r.score === 1 ? '#ffc107' : '#dc3545';
+            html += `
+                <p style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <strong>Scenario ${i + 1}: ${r.question}</strong><br>
+                    <small style="color: #ccc;">Your Answer:</small> ${r.selected}<br>
+                    <small style="color: ${scoreColor}; font-weight: 600;">Score: ${r.score}/3</small><br>
+                    <small style="color: #ddd; margin-top: 8px; display: block;">${r.feedback}</small>
+                </p>
+            `;
+        });
+
+        html += `
+            </div>
+
+            <div style="margin-top: 30px;">
+                <button class="btn-primary" onclick="location.reload();" style="width: 100%;">🔄 Retake Quiz</button>
+            </div>
+        `;
+
+        resultsDiv.innerHTML = html;
+        resultsDiv.classList.add('show');
+    }
+
+    // Load and start
+    loadQuizData();
+</script>
+
+</body>
+</html>

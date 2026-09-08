@@ -1,0 +1,121 @@
+{
+  "title": "Manager Communication & Coaching Skills",
+  "description": "Practice handling difficult conversations with employees",
+  "estimated_completion_minutes": 10,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Giving Difficult Feedback",
+      "customerSays": "An employee says your feedback in a meeting felt harsh and made them question their ability.",
+      "question": "How do you respond?",
+      "options": [
+        {
+          "text": "Listen to their concern, validate their feeling, explain your intent, and reconnect on what you meant.",
+          "score": 3,
+          "feedback": "✓ Masterful! You showed empathy while clarifying your good intent. You acknowledged their feeling AND explained the facts. This rebuilds trust."
+        },
+        {
+          "text": "Explain that you were just being direct and they need to handle feedback better.",
+          "score": 0,
+          "feedback": "❌ You're right about intent, but wrong about impact. Their feeling is valid. Try: 'I appreciate you telling me. That wasn't my intent. Let me explain...'"
+        },
+        {
+          "text": "Apologize and say you'll soften your feedback in the future.",
+          "score": 1,
+          "feedback": "⚠️ Your heart's in the right place, but you're swinging too far. Honest feedback matters. Try: 'I'm sorry it felt harsh. I meant to help you improve. Let's discuss...'"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Handling Conflict Between Team Members",
+      "customerSays": "Two strong personalities on your team are clashing. It's affecting team morale.",
+      "question": "What's your first move?",
+      "options": [
+        {
+          "text": "Have 1-on-1 conversations with each person separately to understand their perspective before any group conversation.",
+          "score": 3,
+          "feedback": "Perfect! Individual conversations first let each person vent without the other person getting defensive. You gather facts, show you care, then mediate informed."
+        },
+        {
+          "text": "Call a team meeting and have them work it out publicly.",
+          "score": 0,
+          "feedback": "❌ Public conflict escalates tension. Private 1-on-1s first. Only bring people together when you understand both sides AND you know how to mediate."
+        },
+        {
+          "text": "Tell them both to get along or there will be consequences.",
+          "score": 1,
+          "feedback": "⚠️ Authority doesn't solve personality clashes. Listen first, understand the real issue, then address it. Try: 'Tell me what's happening from your perspective.'"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Employee Performance Decline",
+      "customerSays": "One of your best performers has been missing deadlines and their work quality is slipping. You notice they seem distracted.",
+      "question": "What's your approach?",
+      "options": [
+        {
+          "text": "Have a private conversation: 'I've noticed X. How are you doing? What's going on?' Listen before jumping to conclusions.",
+          "score": 3,
+          "feedback": "Excellent! You led with curiosity, not judgment. Maybe they're dealing with something personal. Listen first, then help. This shows you care about the person, not just the performance."
+        },
+        {
+          "text": "Put them on a performance improvement plan immediately.",
+          "score": 0,
+          "feedback": "❌ You're rushing to discipline when you should be asking questions. Is this a personal issue, a skill gap, or a motivation problem? Find out first."
+        },
+        {
+          "text": "Assign them less important work until they get back on track.",
+          "score": 1,
+          "feedback": "⚠️ You're making assumptions. Talk to them first! They might have a valid reason (family issue, health problem, confusion about priorities). Ask."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Delegating a Stretch Assignment",
+      "customerSays": "You have a project that's beyond someone's current experience, but you believe they can do it with support.",
+      "question": "How do you delegate it?",
+      "options": [
+        {
+          "text": "Tell them why you think they're ready, offer support and resources, set a timeline for check-ins, and let them know it's okay to ask questions.",
+          "score": 3,
+          "feedback": "Perfect! You're coaching them up, not just throwing them in. Clear expectations, safety net (check-ins), and psychological safety (okay to ask). This builds confidence AND capability."
+        },
+        {
+          "text": "Give them the assignment and tell them to figure it out.",
+          "score": 0,
+          "feedback": "❌ That's sink or swim. They might drown and lose confidence. Stretch assignments need support. Try: 'You're ready for this. Here's how I'll help...'"
+        },
+        {
+          "text": "Give them the assignment but warn them it's hard and might not work out.",
+          "score": 1,
+          "feedback": "⚠️ You're undermining their confidence before they start. Instead: 'This is a great learning opportunity. I believe you can do this, and here's my support...'"
+        }
+      ]
+    }
+  ],
+  "masteryLevels": [
+    {
+      "threshold": 85,
+      "label": "Exceptional Manager 🏆",
+      "description": "You handle tough conversations with empathy, wisdom, and clarity. Your team trusts you, grows under you, and stays engaged. This is leadership excellence."
+    },
+    {
+      "threshold": 70,
+      "label": "Strong Communicator 💼",
+      "description": "You handle most conversations well and show genuine care for your team. Focus on the scenarios where you scored lower to strengthen your skills."
+    },
+    {
+      "threshold": 50,
+      "label": "Developing Leadership 📈",
+      "description": "You're building your communication skills. Difficult conversations are hard. Review the scenarios you found challenging and practice with a mentor or manager."
+    },
+    {
+      "threshold": 0,
+      "label": "Leadership Development Recommended 🎓",
+      "description": "Managing people requires specific communication skills. Consider taking a management training course or working with a leadership coach on difficult conversations."
+    }
+  ]
+}

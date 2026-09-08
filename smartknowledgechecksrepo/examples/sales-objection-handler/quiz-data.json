@@ -1,0 +1,197 @@
+{
+  "title": "Sales Objection Handler",
+  "description": "Practice handling real-world sales objections with confidence and skill",
+  "estimated_completion_minutes": 12,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Price Objection",
+      "customerSays": "Your competitor costs 40% less. Why should I pay more?",
+      "question": "How do you respond?",
+      "options": [
+        {
+          "text": "Our solution includes premium support, faster implementation, and 99.99% uptime SLA - you get what you pay for.",
+          "score": 3,
+          "feedback": "✓ Excellent! You pivoted from price to value and provided specific proof points. This addresses their real concern (cost justification) while building trust."
+        },
+        {
+          "text": "You get what you pay for - cheap solutions have expensive consequences.",
+          "score": 2,
+          "feedback": "Good start! You contrasted value, but could be stronger by naming specific features. Try: 'We include X, Y, Z that competitors don't offer.'"
+        },
+        {
+          "text": "Let me get back to you with pricing data.",
+          "score": 1,
+          "feedback": "⚠️ You've given them time to shop around. Address value FIRST before a callback. Try: 'Let me show you the ROI, then we discuss pricing.'"
+        },
+        {
+          "text": "If you think we're expensive, you don't understand our value.",
+          "score": 0,
+          "feedback": "❌ Avoid this! It's dismissive. Instead listen and pivot: 'I understand cost matters. Let me show you what you get for this investment...'"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Feature Gap",
+      "customerSays": "Your solution doesn't have the real-time reporting features our competitor offers.",
+      "question": "What's your move?",
+      "options": [
+        {
+          "text": "Actually, we do have real-time reporting - it's in our Analytics Dashboard. Plus, we include automated alerts you won't get with them.",
+          "score": 3,
+          "feedback": "Perfect! You corrected the misconception AND added value with a feature they don't know you have. This builds confidence in your solution."
+        },
+        {
+          "text": "We're adding that feature next quarter. Would you be interested in being a beta tester?",
+          "score": 3,
+          "feedback": "Also excellent! You acknowledged the gap, showed commitment to their needs, and made them feel special. Future roadmap transparency builds trust."
+        },
+        {
+          "text": "Those real-time reports aren't that important - most customers don't use them.",
+          "score": 1,
+          "feedback": "⚠️ You dismissed their stated need. Never tell a customer their priority doesn't matter. Try: 'I understand that's important. Here's how we approach it...'"
+        },
+        {
+          "text": "That's just a nice-to-have. Focus on the core functionality instead.",
+          "score": 0,
+          "feedback": "❌ You're telling them what's important for THEIR business. Listen to THEIR priorities, then explain how you address them."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Trust & Proof",
+      "customerSays": "You're smaller than the market leader. How do I know you'll still be around in 5 years?",
+      "question": "How do you build confidence?",
+      "options": [
+        {
+          "text": "That's a fair concern. 40% of Fortune 500 companies trust us with their most critical operations - here are case studies from companies in your industry.",
+          "score": 3,
+          "feedback": "✓ Masterful! You validated their concern, provided social proof with numbers, and gave specific proof (case studies). This transforms doubt into confidence."
+        },
+        {
+          "text": "We've been in business for 12 years and growing 30% annually. Our customer retention is 95%.",
+          "score": 2,
+          "feedback": "Good! You provided reassuring metrics. To strengthen this, add specific customer names or case studies: 'Companies like X and Y trust us...'"
+        },
+        {
+          "text": "We're venture-backed, which means we have strong financial backing.",
+          "score": 1,
+          "feedback": "⚠️ Venture backing doesn't guarantee longevity (see: failed startups). Instead, share: stable customer base, growth rates, or customer testimonials."
+        },
+        {
+          "text": "Everyone's concerned about that these days. You have to take a risk somewhere.",
+          "score": 0,
+          "feedback": "❌ You dismissed their legitimate business concern. Never minimize a customer's risk. Address it head-on with proof: financials, case studies, customer testimonials."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Timing Delay",
+      "customerSays": "We're not ready to implement until next quarter. Can we revisit this then?",
+      "question": "How do you keep momentum?",
+      "options": [
+        {
+          "text": "Of course! Here's what I suggest: Let's do a quick pilot with your team next month so you're ready to scale in Q2. That way, implementation will be faster.",
+          "score": 3,
+          "feedback": "Brilliant! You honored their timeline AND moved forward with a pilot. This keeps engagement high and de-risks their implementation. You win."
+        },
+        {
+          "text": "I understand. Let's lock in a meeting for January to set up your account and training.",
+          "score": 2,
+          "feedback": "Good! You moved the conversation to a next step. To strengthen: offer a shorter engagement (pilot, proof-of-concept) to keep momentum going in the interim."
+        },
+        {
+          "text": "Sure, I'll follow up in January.",
+          "score": 1,
+          "feedback": "⚠️ Long delays kill deals - buyer priorities change. Try: 'I respect that timeline. Can we do a quick trial or proof-of-concept sooner?'"
+        },
+        {
+          "text": "Next quarter will be too late - our pricing goes up then. You should sign now.",
+          "score": 0,
+          "feedback": "❌ Pressure tactics backfire. Respect their timeline and build value. Try: 'I understand your timeline. What if we started with a pilot now?'"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scenario": "Comparison Pressure",
+      "customerSays": "We're comparing you against three other vendors. What makes you different?",
+      "question": "How do you stand out?",
+      "options": [
+        {
+          "text": "Great question. Unlike most vendors, we focus on X and Y, which we know matter most in your industry. Plus, we have the shortest implementation time - most customers go live in 4 weeks, not 12.",
+          "score": 3,
+          "feedback": "Perfect! You showed you understand THEIR priorities (industry specificity), named your differentiator (speed), and backed it up with proof (4-week timelines). Very strong."
+        },
+        {
+          "text": "We're honestly the best solution out there. Our technology is superior and our team is more experienced.",
+          "score": 2,
+          "feedback": "Good confidence, but too generic. Strengthen with specifics: 'Unlike competitors, we specialize in your use case' or 'Our customers report 3x faster ROI.'"
+        },
+        {
+          "text": "I don't know what the other vendors are offering, so I can't really compare.",
+          "score": 1,
+          "feedback": "⚠️ Do your homework! Research competitors, know their weaknesses, prepare your differentiators. Try: 'I'm familiar with the main players. Here's why our approach is better for your needs...'"
+        },
+        {
+          "text": "The other vendors are overpriced and outdated. We're clearly the better choice.",
+          "score": 0,
+          "feedback": "❌ Never bad-mouth competitors - it looks desperate. Focus on YOUR strengths: 'We specialize in X, which means you get Y benefit that matters for your situation.'"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "scenario": "Recovery Play",
+      "customerSays": "Your competitor already demoed their solution and it looked impressive. I think they're the better fit.",
+      "question": "How do you recover?",
+      "options": [
+        {
+          "text": "I appreciate that. What specifically impressed you about their demo? Let me show you how we approach that problem differently - our customers prefer our method because it's simpler and faster to implement.",
+          "score": 3,
+          "feedback": "Masterful! You asked for specifics (their priority), showed empathy (acknowledged their interest), and positioned your difference with proof (customer preference + faster). This rebuilds confidence."
+        },
+        {
+          "text": "Let me schedule another demo where I can show you the features they highlighted, plus some benefits they missed.",
+          "score": 2,
+          "feedback": "Good recovery! You're offering more information. To strengthen: Ask what impressed them FIRST so your demo directly addresses their priorities, not generic features."
+        },
+        {
+          "text": "Don't make a decision yet - you should see what we can do.",
+          "score": 1,
+          "feedback": "⚠️ Vague urgency doesn't work. Instead: 'I understand they made a strong impression. Can I show you one key difference that might change your mind?'"
+        },
+        {
+          "text": "Their demo probably looked better, but ours is actually more powerful once you really use it.",
+          "score": 0,
+          "feedback": "❌ You're questioning their judgment. Instead, validate and redirect: 'Their demo looked good! Here's what we do differently that matters for your specific needs...'"
+        }
+      ]
+    }
+  ],
+  "masteryLevels": [
+    {
+      "threshold": 85,
+      "label": "Elite Closer 🏆",
+      "description": "You consistently handle objections with confidence, pivot to value, and provide proof. Your customers feel heard and trust your solution. You're closing deals."
+    },
+    {
+      "threshold": 70,
+      "label": "Skilled Negotiator 💼",
+      "description": "You handle most objections well and know when to pivot. You're closing some deals. Focus on objection scenarios where you scored lower for faster improvement."
+    },
+    {
+      "threshold": 50,
+      "label": "Developing Skills 📈",
+      "description": "You're building confidence with objection handling. Study the feedback carefully - especially scenarios where you scored 0-1 points. Practice your responses with a manager."
+    },
+    {
+      "threshold": 0,
+      "label": "Keep Practicing 🎯",
+      "description": "Every objection is a learning opportunity. Review the feedback carefully. Consider recording your practice responses and comparing to the Elite solutions above."
+    }
+  ]
+}

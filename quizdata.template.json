@@ -1,0 +1,98 @@
+{
+  "title": "Interactive Scenario Quiz - [YOUR TITLE HERE]",
+  "description": "Learn by practicing real-world scenarios. Choose your response and get coaching feedback.",
+  "estimated_completion_minutes": 10,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Scenario 1: [Your First Scenario Title]",
+      "customerSays": "The objection, situation, or customer statement goes here. Make it realistic and specific.",
+      "question": "How do you respond?",
+      "options": [
+        {
+          "text": "Best response - Addresses concern, provides value, shows expertise",
+          "score": 3,
+          "feedback": "✓ Excellent! You did X which shows Y. This approach builds trust because..."
+        },
+        {
+          "text": "Good response - Helpful but missing something key",
+          "score": 2,
+          "feedback": "Good attempt! You addressed the concern, but you could strengthen this by... Next time, also consider..."
+        },
+        {
+          "text": "Weak response - Dismissive, defensive, or incomplete",
+          "score": 1,
+          "feedback": "⚠️ This approach misses the mark because... Instead, try focusing on... Remember, the customer's concern is valid even if..."
+        },
+        {
+          "text": "Poor response - Counterproductive or makes things worse",
+          "score": 0,
+          "feedback": "❌ Avoid this! This response devalues your solution and damages trust. Instead of dismissing concerns, address them with proof points like case studies, timelines, or ROI data."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Scenario 2: [Your Second Scenario Title]",
+      "customerSays": "Another realistic situation or objection.",
+      "question": "How do you handle this?",
+      "options": [
+        {
+          "text": "Strong response option",
+          "score": 3,
+          "feedback": "Perfect! You did X..."
+        },
+        {
+          "text": "Alternative strong response",
+          "score": 3,
+          "feedback": "Also excellent! Different approach, same strong result..."
+        },
+        {
+          "text": "Weaker option",
+          "score": 1,
+          "feedback": "⚠️ This doesn't fully address..."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Scenario 3: [Recovery or Complex Scenario]",
+      "customerSays": "A challenging situation that tests judgment and empathy.",
+      "question": "What's your move?",
+      "options": [
+        {
+          "text": "Professional, empathetic, problem-solving response",
+          "score": 3,
+          "feedback": "Masterful! You stayed calm, validated their concern, and pivoted to solutions. This is exactly how to recover from mistakes or conflicts."
+        },
+        {
+          "text": "Defensive or dismissive response",
+          "score": 0,
+          "feedback": "❌ Avoid this! When a customer is unhappy, validating their feeling first rebuilds trust. You can be right and still lose the deal if you're defensive."
+        }
+      ]
+    }
+  ],
+  "masteryLevels": [
+    {
+      "threshold": 85,
+      "label": "Elite 🏆",
+      "description": "You consistently choose strong responses and understand the nuances of real-world situations."
+    },
+    {
+      "threshold": 70,
+      "label": "Skilled 💼",
+      "description": "You handle most scenarios well. Focus on the scenarios where you scored lower for more refinement."
+    },
+    {
+      "threshold": 50,
+      "label": "Developing 📈",
+      "description": "You're building confidence. Review the scenarios you found challenging and practice the winning approaches."
+    },
+    {
+      "threshold": 0,
+      "label": "Keep Practicing 🎯",
+      "description": "Every response is a learning opportunity. Study the feedback carefully and retake the quiz to improve."
+    }
+  ]
+}
